@@ -100,9 +100,25 @@ void loop() {
     digitalWrite(buzzerPin, HIGH);
     delay(3);
     digitalWrite(buzzerPin, LOW);
-    if (distance < 2000){
-    delay(distance*2);
+    if (distance < 30){
+      delay(5);
     }
+    else if (distance < 50){
+      delay(20);
+    }
+    else if (distance < 100){
+      delay(100);
+    }
+    else if (distance < 200) {
+      delay(250);
+    }
+    else if (distance > 2000){
+      delay(100);
+    }
+    else {
+      delay(1000);
+    }
+   
   }
   //if green wins
   else if (greenVal = 255){
